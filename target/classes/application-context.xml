@@ -6,17 +6,17 @@
 
 	<!-- bean definitions here -->
 
+	<bean name="add" class="com.lavish.spring.model.Address">
+		<property name="city" value="Noida" />
+		<property name="state" value="UP" />
+	</bean>
 
 	<bean name="e1" class="com.lavish.spring.model.Employee">
 		<property name="name" value="Anas" />
 		<property name="gender" value="Male" />
 		<property name="id" value="908" />
+		<property name="address" ref="add" />
 	</bean>
-	
-	<bean name="e2" class="com.lavish.spring.model.Employee">
-		<constructor-arg name="name" value="Anas" />
-		<constructor-arg name="gender" value="Male" />
-		<constructor-arg name="id" value="908" />
-	</bean>
+
 
 </beans>
